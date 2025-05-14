@@ -388,15 +388,34 @@ Minimum number: 2
 Subtraction (Max - Min): 11
 ```
 
-## 
+## Problem-15: Write conditional statements to identify the student’s average marks. If any subject’s mark is less than 40, you should print FAILED instead of making average marks
+student_1 = [40, 45, 70, 90, 56]
+student_2 = [57, 35, 80, 98, 46]
 
 ### Solution of Problem-15
 **Code:**
 ```python
+def evaluate_student(marks):
+    # Check if any subject has marks less than 40
+    if any(mark < 40 for mark in marks):
+        print("FAILED")
+    else:
+        average = sum(marks) / len(marks)
+        print("Average Marks:", average)
 
+# Test for Student 1
+print("Student 1 Result:") 
+evaluate_student([40, 45, 70, 90, 56])  # All above 40 → show average
+
+# Test for Student 2
+print("Student 2 Result:")
+evaluate_student([57, 35, 80, 98, 46])  # One subject < 40 → FAILED
 ```
 
 **Output:**
 ```python
-
+Student 1 Result:
+Average Marks: 60.2
+Student 2 Result:
+FAILED
 ```
