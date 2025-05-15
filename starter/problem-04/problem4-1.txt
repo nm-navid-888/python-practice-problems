@@ -1,0 +1,3 @@
+## Write a program to find the index of bob
+Where a list of student names is 
+students = ['Alice', 'Bob', 'Charlie', 'David']
