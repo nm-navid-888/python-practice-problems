@@ -13,9 +13,7 @@ You are building a simple text utility tool for your web app.
 ### Solution of Problem-1
 **Code:**
 ```python
-# Problem-1: Reverse a String Without Slicing
-
-# Idefining a variable named input_string and assigning it the string "bongodev"
+# Idefining a variable named input_string and assigning the string "bongodev"
 input_string = "bongodev"
 
 # Initialize a new variable as an empty string to store the characters in reverse order.
@@ -81,17 +79,40 @@ print("Number of vowels:", vowel_count)
 Number of vowels: 10
 ```
 
-## 
+## Problem-3: Find Duplicates in a List
+
+You’re given a user-uploaded list of tags. Identify duplicates for suggestion cleanup.
+
+-   **Input**: `["ai", "ml", "python", "ml", "dl", "ai"]`
+-   **Output**: `["ml", "ai"]`
+-   **Hint**: Use a dictionary or set to track seen elements.
 
 ### Solution of Problem-03
 **Code:**
 ```python
+# Input list of tags
+tags = ["ai", "ml", "python", "ml", "dl", "ai"]
 
+# Dictionary to count occurrences
+tag_count = {}
+
+# Loop through each tag and count them
+for tag in tags:
+    if tag in tag_count:
+        tag_count[tag] += 1
+    else:
+        tag_count[tag] = 1
+
+# Extract duplicates (those with count > 1)
+duplicates = [tag for tag, count in tag_count.items() if count > 1]
+
+# Output the duplicates
+print("Duplicate Tags:", duplicates)
 ```
 
 **Output:**
 ```python
-
+Duplicate Tags: ['ai', 'ml']
 ```
 
 ## 
